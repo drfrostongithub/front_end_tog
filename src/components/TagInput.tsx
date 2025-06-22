@@ -21,6 +21,13 @@ const TagInput = () => {
     setTags(newTags);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      addTag();
+    }
+  };
+
   return (
     <div className="tag-input">
       <div>
@@ -36,6 +43,7 @@ const TagInput = () => {
         placeholder="Add a tag"
         value={inputValue}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
       />
       <button type="button" onClick={addTag}>
         Add
