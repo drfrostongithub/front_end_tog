@@ -33,7 +33,17 @@ const TagInput = () => {
       <div>
         {tags.map((tag, index) => (
           <div key={index} className="tag">
-            <span>{tag}</span>
+            <span
+              style={{
+                borderRadius: "16px",
+                textAlign: "center",
+                padding: "5px",
+                margin: "5px",
+                border: "1px solid #ccc",
+              }}
+            >
+              {tag}
+            </span>
             <button onClick={() => removeTag(index)}>x</button>
           </div>
         ))}
