@@ -1,12 +1,12 @@
 import "./App.css";
-import TagInput from "./components/TagInput";
+import Tag from "./components/Tag";
 
 function App() {
   return (
     <>
       <div>
         <h1>Tag Input</h1>
-        <TagInput />
+        <Tag />
       </div>
     </>
   );
